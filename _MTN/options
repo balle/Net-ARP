@@ -1,0 +1,3 @@
+database "/data/develop/perl/Modules/libnet-arp-perl.mtn"
+  branch "stable"
+  keydir "/home/basti/.monotone/keys"
