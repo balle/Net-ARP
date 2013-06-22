@@ -2,7 +2,7 @@
 # Perl ARP Extension makefile
 #
 # Programmed by Bastian Ballmann
-# Last update: 31.01.2007
+# Last update: 22.06.2013
 #
 # This program is free software; you can redistribute 
 # it and/or modify it under the terms of the 
@@ -45,7 +45,7 @@ else
 
 WriteMakefile(
     NAME              => 'Net::ARP',
-    VERSION           => '1.0',
+    VERSION           => '1.0.7',
     AUTHOR            => 'Bastian Ballmann',
     DEFINE            => $flags, 
     OBJECT            => $objects	      

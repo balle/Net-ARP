@@ -2,7 +2,7 @@
 # Perl ARP Extension
 #
 # Programmed by Bastian Ballmann
-# Last update: 31.01.2007
+# Last update: 22.06.2013
 #
 # This program is free software; you can redistribute 
 # it and/or modify it under the terms of the 
@@ -41,7 +41,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '1.0';
+our $VERSION = '1.0.7';
 
 require XSLoader;
 XSLoader::load('Net::ARP', $VERSION);
@@ -101,7 +101,6 @@ get the mac address of an ethernet interface or ip address.
   I think this is self documentating.
   ARP operation can be one of the following values:
   request, reply, revrequest, revreply, invrequest, invreply.
-  The default ARP operation is reply.
 
 =item B<get_mac()>
 
@@ -127,12 +126,12 @@ get the mac address of an ethernet interface or ip address.
 
 =head1 AUTHOR
 
- Bastian Ballmann [ Balle@chaostal.de ]
- http://www.datenterrorist.de
+ Bastian Ballmann [ balle@codekid.net ]
+ http://www.codekid.net
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2004-2009 by Bastian Ballmann
+Copyright (C) 2004-2013 by Bastian Ballmann
 
 License: GPLv2
 
