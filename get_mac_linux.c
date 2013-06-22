@@ -56,6 +56,7 @@ int get_mac_linux(const char *dev, char *mac)
       if((ioctl(sock, SIOCGIFHWADDR, &iface)) < 0)
 	{
 	  perror("ioctl SIOCGIFHWADDR");
+	  close(sock);
 	  return -1;
 	}
       else
@@ -70,5 +71,6 @@ int get_mac_linux(const char *dev, char *mac)
 	}
     }
 
+  close(sock);
   return 0;
 }
