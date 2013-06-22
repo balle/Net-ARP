@@ -1,3 +1,13 @@
+Changes between 1.0.6 and 1.0.7
+
+- fixed unnecessary memcpy of dest addr (see https://rt.cpan.org/Ticket/Display.html?id=86223)
+  Thanks to Daniel Black
+
+- abort on unknown arp operation
+- get_mac linux forgot to close socket - see https://rt.cpan.org/Public/Bug/Display.html?id=86221
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 Changes between 1.0.5 and 1.0.6
 
 new linux arp lookup via ioctl by Franck Joncourt <franck.mail@dthconnex.com>

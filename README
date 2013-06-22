@@ -3,8 +3,8 @@
 Net::ARP
 
 Programmed by Bastian Ballmann
-Web: http://www.datenterrorist.de
-Mail: balle@chaostal.de
+Web: http://www.codekid.net
+Mail: balle@codekid.net
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -43,15 +43,20 @@ If you've still any questions feel free to ask.
 ---:[ Want to contribute?
 
 Please drop me a mail and if you want to submit patches please
-generate them using "diff -Nru" on the latest version. 
-There's also the possibility to exchange changes using the 
-distributed version control system monotone.
-Last but not least new code should be commented and I like test code ;)
+generate them using "diff -Nru" on the latest version or use the
+exellent github pull request feature!
+https://github.com/balle/Net-ARP
+
+There is also the possibility to use the CPAN bugtracker 
+https://rt.cpan.org
+
+Last but not least new code for new features should be commented 
+and I like test code ;)
 
 
 ---:[ COPYRIGHT AND LICENCE
 
-Copyright (C) 2004-2009 by Bastian Ballmann
+Copyright (C) 2004-2013 by Bastian Ballmann
 
 This software is licensed under GPLv2
 
