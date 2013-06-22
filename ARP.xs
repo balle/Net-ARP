@@ -3,7 +3,7 @@ Perl ARP Extension
 Create and send an arp packets, lookup mac addresses
 
 Programmed by Bastian Ballmann
-Last update: 31.01.2007
+Last update: 22.06.2013
 
 This program is free software; you can redistribute 
 it and/or modify it under the terms of the 
@@ -92,7 +92,8 @@ send_packet(dev, sip, dip, smac, dmac, type)
 	  }
 	  else
 	  {
-	    op = ARPOP_REPLY;
+	    printf("Unknown ARP operation\n");
+	    RETVAL = 0;
 	  }
 
 	  if(smac == NULL)
@@ -162,9 +163,6 @@ send_packet(dev, sip, dip, smac, dmac, type)
 	        memcpy(arp->source_add,(u_char *)ether_aton(smac),ETH_ALEN);           // Source MAC
 		ipaddr = inet_addr(sip);
 		memcpy(arp->source_ip, (u_char *)&ipaddr, IP_ALEN);		       // Source IP
-
-	        if(strcmp(dmac,"ff:ff:ff:ff:ff:ff"))
-          		memcpy(arp->dest_add,(u_char *)ether_aton(dmac),ETH_ALEN);     // Destination MAC
 
 		ipaddr = inet_addr(dip);
 		memcpy(arp->dest_ip, (u_char *)&ipaddr, IP_ALEN);		       // Destination IP
