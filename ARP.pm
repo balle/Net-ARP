@@ -2,7 +2,7 @@
 # Perl ARP Extension
 #
 # Programmed by Bastian Ballmann
-# Last update: 22.06.2013
+# Last update: 24.06.2013
 #
 # This program is free software; you can redistribute 
 # it and/or modify it under the terms of the 
@@ -41,7 +41,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '1.0.7';
+our $VERSION = '1.0.8';
 
 require XSLoader;
 XSLoader::load('Net::ARP', $VERSION);

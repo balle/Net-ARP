@@ -161,6 +161,7 @@ send_packet(dev, sip, dip, smac, dmac, type)
 	        arp->pa_len = IP_ALEN;                                                 // Protocol address length
 	        arp->opcode = htons(op);                                               // ARP operation
 	        memcpy(arp->source_add,(u_char *)ether_aton(smac),ETH_ALEN);           // Source MAC
+		memcpy(arp->dest_add,(u_char *)ether_aton(dmac),ETH_ALEN);             // Destination MAC
 		ipaddr = inet_addr(sip);
 		memcpy(arp->source_ip, (u_char *)&ipaddr, IP_ALEN);		       // Source IP
 
