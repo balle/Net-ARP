@@ -32,7 +32,7 @@ if($Config{'osname'} =~ /linux/i)
     $flags = "-DLINUX";
     $objects = "ARP.o send_packet_linux.o get_mac_linux.o arp_lookup_linux.o";
 }
-elsif($Config{'osname'} =~ /bsd/i)
+elsif($Config{'osname'} =~ /bsd|darwin/i)
 {
     $flags = "-DBSD";
     $objects = "ARP.o send_packet_bsd.o get_mac_bsd.o arp_lookup_bsd.o";
