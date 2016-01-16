@@ -1,3 +1,9 @@
+Changes between 1.0.8 and 1.0.9
+
+- support for mac os x (thanks to Jose Palao)
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 Changes between 1.0.7 and 1.0.8
 
 - fixed bugfix (see https://rt.cpan.org/Ticket/Display.html?id=86223)
