@@ -3,7 +3,7 @@ Perl ARP Extension
 Create and send an arp packets, lookup mac addresses
 
 Programmed by Bastian Ballmann
-Last update: 27.04.2020
+Last update: 29.04.2020
 
 This program is free software; you can redistribute 
 it and/or modify it under the terms of the 
@@ -26,7 +26,13 @@ See the GNU General Public License for more details.
 #include <stdlib.h>          
 #include <string.h>          
 #include <errno.h>           
+#ifdef OPENBSD
+#include <net/ethertypes.h>
+#include <net/if_arp.h>
+#include <netinet/if_ether.h>
+#else
 #include <net/ethernet.h>    
+#endif
 #ifdef BSD
 #else
 #include <netinet/ether.h>

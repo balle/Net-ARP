@@ -4,7 +4,7 @@ Get the MAC address of an interface
 BSD code
 
 Programmed by Bastian Ballmann
-Last update: 09.02.2006
+Last update: 29.04.2020
 
 Fixed for FreeBSD by Niels Bakker
 Last update: 2007-12-26
@@ -26,10 +26,13 @@ See the GNU General Public License for more details.
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <ifaddrs.h>
-
 #include <net/if_dl.h>
 #include <net/if_types.h>
+#ifdef OPENBSD
+#include <net/ethertypes.h>
+#else
 #include <net/ethernet.h>
+#endif
 #include "arp.h"
 
 int get_mac_bsd(const char *dev, char *mac)
