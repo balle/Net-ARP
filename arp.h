@@ -59,7 +59,7 @@ struct my_arphdr {
    u_char dest_ip[IP_ALEN];     // dest ip
 };
 
-#ifdef LINUX 
+#if defined(LINUX) && defined(__THROW) 
   extern struct ether_addr *ether_aton (__const char *__asc) __THROW;
 #else
   extern struct ether_addr *ether_aton (__const char *__asc);
