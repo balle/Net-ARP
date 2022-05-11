@@ -28,6 +28,7 @@ See the GNU General Public License for more details.
 #include <errno.h>           
 #include <net/ethernet.h>    
 #ifdef BSD
+#include <netinet/if_ether.h>
 #else
 #include <netinet/ether.h>
 #endif

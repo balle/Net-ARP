@@ -57,6 +57,7 @@ struct my_arphdr {
 #ifdef LINUX 
   extern struct ether_addr *ether_aton (__const char *__asc) __THROW;
 #else
+  #define LINUX 0
   extern struct ether_addr *ether_aton (__const char *__asc);
 #endif
 extern int get_mac_linux(const char *dev, char *mac);
