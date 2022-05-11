@@ -2,7 +2,7 @@
 Perl ARP Extension header file
 
 Programmed by Bastian Ballmann
-Last update: 19.12.2003
+Last update: 11.05.2022
 
 This program is free software; you can redistribute 
 it and/or modify it under the terms of the 
@@ -34,11 +34,6 @@ See the GNU General Public License for more details.
 #endif
 #ifndef ETH_P_ALL
 #define ETH_P_ALL        0x0000
-#endif
-#ifdef BSD
-#define SOCK_TYPE        SOCK_RAW
-#else
-#define SOCK_TYPE        SOCK_PACKET
 #endif
 #define IP_ALEN          4
 

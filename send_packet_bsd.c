@@ -37,32 +37,33 @@ int send_packet_bsd(const char *dev, u_char *packet, u_int packetsize)
 
   // Open a bpf device
   for(i = 0; i < 512; i++)
-    {
-      sprintf(bpfdev,"/dev/bpf%d",i);
-      if((bpffd = open(bpfdev,O_WRONLY)) > 0)
-	{
-	  break;	     
-	}
-    }
+  {
+    sprintf(bpfdev, "/dev/bpf%d", i);
+
+    if((bpffd = open(bpfdev, O_WRONLY)) > 0)
+	  {
+	    break;	     
+	  }
+  }
   
   if(bpffd < 0)
-    {
-      perror("open bpf");
-      return 0;
-    }
+  {
+    perror("open bpf");
+    return 0;
+  }
   else
-    {
-      // Lock it
-      flock(bpffd,LOCK_EX);
+  {
+    // Lock it
+    flock(bpffd, LOCK_EX);
       
-      // Bind it to a device
-      ioctl(bpffd,BIOCSETIF,dev);
+    // Bind it to a device
+    ioctl(bpffd, BIOCSETIF, dev);
       
-      // Send the packet and unlock
-      write(bpffd,packet,packetsize);
-      flock(bpffd,LOCK_UN);
-      close(bpffd);
-    }
+    // Send the packet and unlock
+    write(bpffd, packet, packetsize);
+    flock(bpffd, LOCK_UN);
+    close(bpffd);
+  }
 
   return 1;
 }

@@ -1,3 +1,8 @@
+Changes between 1.0.11 and 1.0.12
+
+- removed warnings
+- sock type is now always SOCK_RAW
+
 Changes between 1.0.10 and 1.0.11
 
 - fixed tests
@@ -14,7 +19,7 @@ Changes between 1.0.8 and 1.0.9
 
 Changes between 1.0.7 and 1.0.8
 
-- fixed bugfix (see https://rt.cpan.org/Ticket/Display.html?id=86223)
+- fixed bug (see https://rt.cpan.org/Ticket/Display.html?id=86223)
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
