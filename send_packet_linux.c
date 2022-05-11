@@ -45,7 +45,7 @@ int send_packet_linux(const char *dev, u_char *packet, u_int packetsize)
   }
 
   // Create socket descriptor
-  if( ( sock = socket(AF_INET, SOCK_RAW, htons(ETH_P_ALL))) < 0 ) 
+  if( ( sock = socket(AF_PACKET, SOCK_PACKET, htons(ETH_P_ALL))) < 0 ) 
   { 
     perror("socket"); 
     return 0;
