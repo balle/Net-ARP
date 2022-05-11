@@ -1,0 +1,8 @@
+{
+    "version" : "1.0.12",
+    "name"    : "Net::ARP",
+    "author"  : "Bastian Ballmann",
+    "abstract": "Perl extension for creating ARP packets",
+    "license" : "GPLv2",
+    "release_status" : "stable"
+}
