@@ -2,6 +2,7 @@ Changes between 1.0.11 and 1.0.12
 
 - removed warnings
 - sock type is now always SOCK_RAW
+- added missing bsd includes
 
 Changes between 1.0.10 and 1.0.11
 

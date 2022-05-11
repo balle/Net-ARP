@@ -4,7 +4,7 @@ Send the packet
 BSD code
 
 Programmed by Bastian Ballmann
-Last update: 01.12.2004
+Last update: 11.05.2022
 
 This program is free software; you can redistribute 
 it and/or modify it under the terms of the 
@@ -24,6 +24,8 @@ See the GNU General Public License for more details.
 #include <fcntl.h>
 #include <net/bpf.h>
 #include <net/if.h>
+#include <string.h>
+#include <stdio.h>
 #include "arp.h"
 
 int send_packet_bsd(const char *dev, u_char *packet, u_int packetsize)
